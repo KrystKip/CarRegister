@@ -7,7 +7,7 @@ namespace Car_Register.Services
 {
     public class FileService
     {
-        private readonly string _path = Path.Combine(AppDomain.CurrentDomain.BaseDirectory, "file.csv");
+        private readonly string _path = Path.Combine(Directory.GetParent(AppDomain.CurrentDomain.BaseDirectory).Parent.Parent.Parent.FullName,"file.csv");
 
         public void SaveCarsToFile(List<Car> cars) // save list of cars to csv file
         {
